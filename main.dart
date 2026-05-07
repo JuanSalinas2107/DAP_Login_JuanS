@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'views/inicio_view.dart';
-import 'views/bienvenida_view.dart';
+import 'views/pantalla_parte1.dart';
+import 'views/pantalla_parte2.dart';
 
 void main() {
   runApp(const AplicacionNueva());
