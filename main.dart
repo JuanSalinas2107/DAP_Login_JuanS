@@ -2,31 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'views/pantalla_parte1.dart';
 import 'views/pantalla_parte2.dart';
-
 void main() {
-  runApp(const AplicacionNueva());
+  runApp(const SistemaNuevo());
 }
-
-class AplicacionNueva extends StatelessWidget {
-  const AplicacionNueva({super.key});
-
-  static final GoRouter rutas = GoRouter(
+class SistemaNuevo extends StatelessWidget {
+  const SistemaNuevo({super.key});
+  static final GoRouter sistemaRutas = GoRouter(
     routes: [
       GoRoute(
         path: '/',
-        builder: (context, state) => const InicioView(),
+        builder: (context, state) => const PantallaParte1(),
       ),
       GoRoute(
-        path: '/inicio',
-        builder: (context, state) => const BienvenidaView(),
+        path: '/segunda',
+        builder: (context, state) => const PantallaParte2(),
       ),
     ],
   );
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      routerConfig: rutas,
+      routerConfig: sistemaRutas,
       debugShowCheckedModeBanner: false,
     );
   }
